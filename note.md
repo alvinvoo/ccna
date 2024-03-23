@@ -111,9 +111,17 @@ CCNA 200-301
 8. TCP/IP Model
   - [TCP/IP 5 layers + protocols](./TCP-IP-5-layers-protocols.png)
   - Layer 1 - Hub - Physical, Dumb
-  - Layer 2 - Switch/Bridge - knows MAC address
-  - Layer 3 - Router (or Layer 3 switches) - Knows IP
-  - Layer 4 - Transmission Control Protocol or User Datagram Protocol - TCP or UDP
+  - Layer 2 (Link layer) - Switch/Bridge - knows MAC address
+        - data payload called `frame`
+        - ARP
+        - footer contains FCS (Frame Check Sequence) - which is a checksum for error  detection
+  - Layer 3 (Internet / Network layer) - Router (or Layer 3 switches) - Knows IP
+        - `packet`
+        - IPv4, IPv6, ICMP..
+  - Layer 4 (Transport layer) - Transmission Control Protocol or User Datagram Protocol - TCP or UDP
+        - `segment or datagram`
+        - TCP handles error correction, flow control, retransmission, and transport acknowledgement of each segment
+        - UDP provides neither error checking or session management
   - Layer 7 - Applications
   - What is a Protocol?
     - In telecommunication, a communiation protocol is a system of rules that allow two or more entities of a comm. system transmit information via any kind of variation of a physical quantity
